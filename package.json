@@ -2,6 +2,9 @@
   "name": "discord-spotify-vc-bot",
   "version": "1.0.0",
   "main": "bot.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@discordjs/voice": "^0.18.0",
     "@distube/ytdl-core": "^4.14.4",

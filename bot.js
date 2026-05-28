@@ -3,7 +3,7 @@ const {
   GatewayIntentBits,
   SlashCommandBuilder,
   REST,
-  Routes,
+  Routes, 
   EmbedBuilder,
   MessageFlags,
 } = require('discord.js');
