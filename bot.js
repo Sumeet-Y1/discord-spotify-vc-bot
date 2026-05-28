@@ -74,11 +74,14 @@ client.on('interactionCreate', async interaction => {
         channelId: vc.id,
         guildId,
         adapterCreator: vc.guild.voiceAdapterCreator,
+        debug: true,
       });
 
       connection.on('error', error => {
         console.error('Voice connection error:', error);
       });
+
+      connection.on('debug', msg => console.log('Voice debug:', msg));
 
       connection.on('stateChange', (oldState, newState) => {
         console.log(`Voice state: ${oldState.status} -> ${newState.status}`);
@@ -197,7 +200,7 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
-process.on('unhandledRejection', err => console.error('Unhandled rejection:', err));
+process.on('unhandledRejection', err => console.error('Unhandledrejection:', err));
 
 const port = Number(process.env.PORT || 10000);
 const server = http.createServer((req, res) => {
