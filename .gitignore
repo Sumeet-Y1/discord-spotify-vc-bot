@@ -6,4 +6,3 @@ yarn-error.log*
 pnpm-debug.log*
 cookies.json
 cookies.txt
-railway.toml
